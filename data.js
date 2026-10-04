@@ -21,7 +21,7 @@ window.TOURNAMENT = {
     {
       name: 'Matchday 1',
       matches: [
-        { id:'A1', group:'A', home:'10 "B"', away:'11 "A"', score:null },
+        { id:'A1', group:'A', home:'10 "B"', away:'11 "A"', score:'2-1' },
         { id:'A2', group:'A', home:'12 "A"', away:'9 "A"', score:null },
         { id:'B1', group:'B', home:'8 "A"', away:'9 "B"', score:null },
         { id:'B2', group:'B', home:'9 "C"', away:'10 "A"', score:null }
