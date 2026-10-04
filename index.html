@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>Volley4Charity Tournament</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-orb orb1"></div><div class="bg-orb orb2"></div>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#home">
+        <span class="brand-ball">✦</span>
+        <span><strong>VOLLEY4</strong><small>CHARITY</small></span>
+      </a>
+      <nav>
+        <a href="#standings">Standings</a>
+        <a href="#matches">Matches</a>
+        <a href="#bracket">Bracket</a>
+        <a href="#results">Results</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">IPLT "STEFAN CEL MARE" • 2026</div>
+        <h1>Volley<span>4</span>Charity</h1>
+        <p class="hero-sub">A tournament built around competition, community and giving back.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#matches">View matches <span>→</span></a>
+          <a class="btn ghost" href="#bracket">View bracket</a>
+        </div>
+      </div>
+      <div class="hero-ball"><div class="volley-mark">V</div></div>
+      <div class="hero-stat-row">
+        <div><strong>8</strong><span>Teams</span></div>
+        <div><strong>2</strong><span>Groups</span></div>
+        <div><strong>6</strong><span>Group matches / group</span></div>
+        <div><strong>1</strong><span>Champion</span></div>
+      </div>
+    </section>
+
+    <section id="standings" class="section">
+      <div class="section-head">
+        <div><span class="kicker">LIVE TABLE</span><h2>Group standings</h2></div>
+        <span class="rule-note">2–0 win = 2 pts • 2–1 win = 1 pt</span>
+      </div>
+      <div class="groups-grid">
+        <div class="panel"><div class="panel-title"><span>GROUP A</span><em>4 teams</em></div><div id="tableA"></div></div>
+        <div class="panel"><div class="panel-title"><span>GROUP B</span><em>4 teams</em></div><div id="tableB"></div></div>
+      </div>
+    </section>
+
+    <section id="matches" class="section">
+      <div class="section-head">
+        <div><span class="kicker">ROUND ROBIN</span><h2>Matchdays</h2></div>
+        <span class="rule-note">Best of 3</span>
+      </div>
+      <div id="matchdays"></div>
+    </section>
+
+    <section id="bracket" class="section">
+      <div class="section-head">
+        <div><span class="kicker">ROAD TO THE FINAL</span><h2>Knockout bracket</h2></div>
+        <span class="rule-note">All knockout games Bo3 • Final Bo5</span>
+      </div>
+      <div id="bracketView" class="bracket"></div>
+    </section>
+
+    <section id="results" class="section">
+      <div class="section-head">
+        <div><span class="kicker">TOURNAMENT PODIUM</span><h2>Final results</h2></div>
+      </div>
+      <div id="podium" class="podium"></div>
+    </section>
+
+    <section class="section how-section">
+      <div class="panel instructions">
+        <span class="kicker">SCORING FORMAT</span>
+        <h2>Simple scoring. Automatic tables.</h2>
+        <div class="rules-grid">
+          <div><b>01</b><span>Group matches are best of 3. A team wins when it reaches 2 sets.</span></div>
+          <div><b>02</b><span>A 2–0 win earns 2 points. A 2–1 win earns 1 point.</span></div>
+          <div><b>03</b><span>Group tables automatically sort by points, then wins, then set difference.</span></div>
+          <div><b>04</b><span>When scores are entered, playoff and semifinal teams populate automatically.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>VOLLEY4CHARITY</span><span>IPLT "Stefan cel Mare"</span></footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
