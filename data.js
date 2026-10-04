@@ -1,64 +1,51 @@
-// ============================================================
-// VOLLEY4CHARITY TOURNAMENT DATA
-// Edit ONLY the scores below after matches are played.
-// Leave a score as null until the match is played.
-// Group scores: "2-0" or "2-1" (best of 3)
-// Knockout scores: "2-0"/"2-1" (best of 3)
-// FINAL score: "3-0", "3-1", or "3-2" (best of 5)
-// ============================================================
+/*
+  VOLLEY4CHARITY DATA FILE
+  ========================
+  THIS is the only file you normally need to edit.
 
-window.TOURNAMENT = {
-  title: 'IPLT "Stefan cel Mare"',
-  subtitle: 'Volley4Charity Tournament',
-  season: '2026',
+  Match score format: [sets won by team 1, sets won by team 2]
+  Group/playoff/semi/3rd-place matches are best of 3.
+  Final is best of 5.
+
+  Leave a score as null until the match is played.
+*/
+const TOURNAMENT = {
+  name: 'IPLT “Stefan cel Mare” Volley4Charity Tournament',
+  year: '2026',
+  teams: [
+    '10 “B”', '9 “A”', '12 “A”', '8 “A”',
+    '11 “A”', '9 “C”', '10 “A”', '9 “B”'
+  ],
   groups: {
-    A: ['10 "B"', '12 "A"', '9 "A"', '11 "A"'],
-    B: ['8 "A"', '9 "C"', '10 "A"', '9 "B"']
+    A: ['10 “B”','12 “A”','9 “B”','10 “A”'],
+    B: ['9 “C”','11 “A”','8 “A”','9 “A”']
   },
-
-  // Three round-robin matchdays. Each team plays once per matchday.
+  /* 3 matchdays = complete single round-robin in each group. */
   matchdays: [
-    {
-      name: 'Matchday 1',
-      matches: [
-        { id:'A1', group:'A', home:'10 "B"', away:'11 "A"', score:null },
-        { id:'A2', group:'A', home:'12 "A"', away:'9 "A"', score:null },
-        { id:'B1', group:'B', home:'8 "A"', away:'9 "B"', score:null },
-        { id:'B2', group:'B', home:'9 "C"', away:'10 "A"', score:null }
-      ]
-    },
-    {
-      name: 'Matchday 2',
-      matches: [
-        { id:'A3', group:'A', home:'10 "B"', away:'9 "A"', score:null },
-        { id:'A4', group:'A', home:'11 "A"', away:'12 "A"', score:null },
-        { id:'B3', group:'B', home:'8 "A"', away:'10 "A"', score:null },
-        { id:'B4', group:'B', home:'9 "B"', away:'9 "C"', score:null }
-      ]
-    },
-    {
-      name: 'Matchday 3',
-      matches: [
-        { id:'A5', group:'A', home:'10 "B"', away:'12 "A"', score:null },
-        { id:'A6', group:'A', home:'9 "A"', away:'11 "A"', score:null },
-        { id:'B5', group:'B', home:'8 "A"', away:'9 "C"', score:null },
-        { id:'B6', group:'B', home:'10 "A"', away:'9 "B"', score:null }
-      ]
-    }
+    {name:'Matchday 1', matches:[
+      {group:'A', a:'10 “B”', b:'10 “A”', score:null},
+      {group:'A', a:'12 “A”', b:'9 “B”', score:null},
+      {group:'B', a:'9 “C”', b:'9 “A”', score:null},
+      {group:'B', a:'11 “A”', b:'8 “A”', score:null}
+    ]},
+    {name:'Matchday 2', matches:[
+      {group:'A', a:'10 “B”', b:'9 “B”', score:null},
+      {group:'A', a:'10 “A”', b:'12 “A”', score:null},
+      {group:'B', a:'9 “C”', b:'8 “A”', score:null},
+      {group:'B', a:'9 “A”', b:'11 “A”', score:null}
+    ]},
+    {name:'Matchday 3', matches:[
+      {group:'A', a:'10 “B”', b:'12 “A”', score:null},
+      {group:'A', a:'9 “B”', b:'10 “A”', score:null},
+      {group:'B', a:'9 “C”', b:'11 “A”', score:null},
+      {group:'B', a:'8 “A”', b:'9 “A”', score:null}
+    ]}
   ],
-
-  // Cross-group playoffs: 2nd in each group plays 3rd in the other group.
-  playoffs: [
-    { id:'P1', label:'Playoff 1', homeSeed:'A2', awaySeed:'B3', score:null },
-    { id:'P2', label:'Playoff 2', homeSeed:'B2', awaySeed:'A3', score:null }
-  ],
-
-  semifinals: [
-    { id:'SF1', label:'Semi-Final 1', homeSeed:'A1', awaySeed:'P2', score:null },
-    { id:'SF2', label:'Semi-Final 2', homeSeed:'B1', awaySeed:'P1', score:null }
-  ],
-
-  thirdPlace: { id:'3P', label:'3rd Place', homeSeed:'SF1L', awaySeed:'SF2L', score:null },
-
-  final: { id:'F', label:'FINAL', homeSeed:'SF1W', awaySeed:'SF2W', score:null }
+  /* Knockout draw follows the workbook: A2 vs B3 and B2 vs A3. */
+  playoff1:{a:{group:'A',place:2},b:{group:'B',place:3},score:null},
+  playoff2:{a:{group:'B',place:2},b:{group:'A',place:3},score:null},
+  semi1:{a:'seed1',b:'seed4',score:null},
+  semi2:{a:'seed3',b:'seed2',score:null},
+  third:{a:'semi1loser',b:'semi2loser',score:null},
+  final:{a:'semi1winner',b:'semi2winner',score:null}
 };

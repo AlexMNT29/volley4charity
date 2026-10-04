@@ -1,61 +1,27 @@
 # Volley4Charity Tournament Website
 
-## What you edit
-You only need to edit `data.js`.
+A static, professional tournament website for IPLT “Stefan cel Mare” Volley4Charity.
 
-### Group matches
-Enter scores as:
-- `2-0` = winner gets 2 points
-- `2-1` = winner gets 1 point
+## The only file you normally edit
+Open `data.js` and change match `score` values.
 
-Leave unplayed matches as `null`.
+Examples:
+- `{score: [2,0]}` = first team wins 2–0 and gets 2 group points.
+- `{score: [2,1]}` = first team wins 2–1 and gets 1 group point.
+- `{score: null}` = not played yet.
 
-### Playoffs / Semi-finals / 3rd place
-Same format: `2-0` or `2-1`.
+Group matches, playoffs, semifinals and the 3rd-place match are best of 3. The final is best of 5.
 
-### Final
-The final is best of 5:
-- `3-0`
-- `3-1`
-- `3-2`
+The site calculates group standings, qualifying placeholders, playoff winners, seeds, semifinal teams, podium and final results from those scores.
+
+## Publish with GitHub + Vercel
+1. Create a GitHub account at https://github.com/ if you don't have one.
+2. Create a new repository, e.g. `volley4charity`.
+3. Upload `index.html`, `styles.css`, `app.js`, `data.js` and `README.md`.
+4. Go to https://vercel.com/ and sign in with GitHub.
+5. Choose **Add New → Project**, select `volley4charity`, then deploy.
+6. Vercel gives you a public URL. Your PC can be turned off; the site stays online.
+7. To update results later, edit `data.js` on GitHub, commit the change, and Vercel automatically redeploys.
 
 ## Important
-Do NOT manually edit the standings, qualifiers or bracket. They are calculated automatically from the scores.
-
-## Publishing with GitHub + Vercel
-
-1. Create a GitHub account at https://github.com if you don't have one.
-2. Create a new repository. Suggested name: `volley4charity`.
-3. Upload these files to the repository:
-   - `index.html`
-   - `styles.css`
-   - `app.js`
-   - `data.js`
-4. Create a Vercel account at https://vercel.com and sign in with GitHub.
-5. Click "Add New..." → "Project".
-6. Select your `volley4charity` GitHub repository.
-7. Leave the default settings and click Deploy.
-8. Vercel gives you a public URL.
-9. When a match finishes, open `data.js` on GitHub, edit only the score, and commit the change.
-10. Vercel automatically redeploys the site. Refresh the website after deployment.
-
-### Example
-Change:
-`score:null`
-
-to:
-`score:'2-1'`
-
-Do not put quotes around null.
-
-## Changing the groups after the draw
-At the top of `data.js`, change only:
-
-groups: {
-  A: [...],
-  B: [...]
-}
-
-Then change the matchups in the three matchdays so each group has a full round robin.
-
-The current site uses a randomized temporary draw because the official groups have not been drawn yet.
+The groups are randomized in `data.js`. Once the real draw is made, only change the two arrays under `groups` to the official groups. Then the existing matchday schedule follows those groups.
