@@ -28,7 +28,7 @@ body {
 .top {
     background-image: url('volley2.png');
     background-repeat: no-repeat;
-    background-position: right -200px center;
+    background-position: right -230px center;
     background-size: auto 80%;
     background-attachment: scroll;
 }
@@ -255,7 +255,14 @@ body {
     grid-template-columns: repeat(4, 1fr);
     margin: 0 6vw;
     border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line)
+    border-bottom: 1px solid var(--line);
+    bottom: 6%;
+    left: 8%;
+    background: rgba(255, 255, 255, .94);
+    padding: 22px 25px;
+    border-radius: 18px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, .12);
+    gap: 3px
 }
 
 .stats div {
@@ -591,12 +598,12 @@ footer p {
     color: var(--ink)
 }
 
-a {
+.instagram {
     color: #111214;
     text-decoration: none;
 }
 
-a:hover {
+.instagram:hover {
     text-decoration: underline;
 }
 @media(max-width:900px) {
