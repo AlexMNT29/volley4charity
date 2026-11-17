@@ -17,28 +17,28 @@ const TOURNAMENT = {
     '11 “A”', '9 “C”', '10 “A”', '9 “B”'
   ],
   groups: {
-    A: ['10 “B”','12 “A”','9 “B”','10 “A”'],
-    B: ['9 “C”','11 “A”','8 “A”','9 “A”']
+    A: ['12 “A”','10 “A”','9 “B”','8 “A”'],
+    B: ['11 “A”','10 “B”','9 “A”','9 “C”']
   },
   /* 3 matchdays = complete single round-robin in each group. */
   matchdays: [
     {name:'Matchday 1', matches:[
-      {group:'A', a:'10 “B”', b:'10 “A”', score:null},
-      {group:'A', a:'12 “A”', b:'9 “B”', score:null},
-      {group:'B', a:'9 “C”', b:'9 “A”', score:null},
-      {group:'B', a:'11 “A”', b:'8 “A”', score:null}
+      {group:'A', a:'12 “A”', b:'10 “A”', score:null},
+      {group:'A', a:'9 “B”', b:'8 “A”', score:null},
+      {group:'B', a:'11 “A”', b:'10 “B”', score:null},
+      {group:'B', a:'9 “A”', b:'9 “C”', score:null}
     ]},
     {name:'Matchday 2', matches:[
-      {group:'A', a:'10 “B”', b:'9 “B”', score:null},
-      {group:'A', a:'10 “A”', b:'12 “A”', score:null},
-      {group:'B', a:'9 “C”', b:'8 “A”', score:null},
-      {group:'B', a:'9 “A”', b:'11 “A”', score:null}
+      {group:'A', a:'12 “A”', b:'9 “B”', score:null},
+      {group:'A', a:'10 “A”', b:'8 “A”', score:null},
+      {group:'B', a:'11 “A”', b:'9 “A”', score:null},
+      {group:'B', a:'10 “B”', b:'9 “C”', score:null}
     ]},
     {name:'Matchday 3', matches:[
-      {group:'A', a:'10 “B”', b:'12 “A”', score:null},
-      {group:'A', a:'9 “B”', b:'10 “A”', score:null},
-      {group:'B', a:'9 “C”', b:'11 “A”', score:null},
-      {group:'B', a:'8 “A”', b:'9 “A”', score:null}
+      {group:'A', a:'12 “A”', b:'8 “A”', score:null},
+      {group:'A', a:'10 “A”', b:'9 “B”', score:null},
+      {group:'B', a:'11 “A”', b:'9 “C”', score:null},
+      {group:'B', a:'10 “B”', b:'9 “A”', score:null}
     ]}
   ],
   /* Knockout draw follows the workbook: A2 vs B3 and B2 vs A3. */
