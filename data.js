@@ -23,21 +23,21 @@ const TOURNAMENT = {
   /* 3 matchdays = complete single round-robin in each group. */
   matchdays: [
     {name:'Matchday 1', matches:[
-      {group:'A', a:'12 “A”', b:'10 “A”', score:null, date:'19.01.2027'},
+      {group:'A', a:'12 “A”', b:'10 “A”', score:null, date:'18.01.2027'},
       {group:'A', a:'9 “B”', b:'8 “A”', score:null, date:'21.01.2027'},
-      {group:'B', a:'11 “A”', b:'10 “B”', score:null, date:'26.01.2027'},
+      {group:'B', a:'11 “A”', b:'10 “B”', score:null, date:'25.01.2027'},
       {group:'B', a:'9 “A”', b:'9 “C”', score:null, date:'28.01.2027'}
     ]},
     {name:'Matchday 2', matches:[
-      {group:'A', a:'12 “A”', b:'9 “B”', score:null, date:'02.02.2027'},
+      {group:'A', a:'12 “A”', b:'9 “B”', score:null, date:'01.02.2027'},
       {group:'A', a:'10 “A”', b:'8 “A”', score:null, date:'04.02.2027'},
-      {group:'B', a:'11 “A”', b:'9 “A”', score:null, date:'09.02.2027'},
+      {group:'B', a:'11 “A”', b:'9 “A”', score:null, date:'08.02.2027'},
       {group:'B', a:'10 “B”', b:'9 “C”', score:null, date:'11.02.2027'}
     ]},
     {name:'Matchday 3', matches:[
-      {group:'A', a:'12 “A”', b:'8 “A”', score:null, date:'16.02.2027'},
+      {group:'A', a:'12 “A”', b:'8 “A”', score:null, date:'15.02.2027'},
       {group:'A', a:'10 “A”', b:'9 “B”', score:null, date:'18.02.2027'},
-      {group:'B', a:'11 “A”', b:'9 “C”', score:null, date:'23.02.2027'},
+      {group:'B', a:'11 “A”', b:'9 “C”', score:null, date:'22.02.2027'},
       {group:'B', a:'10 “B”', b:'9 “A”', score:null, date:'25.02.2027'}
     ]}
   ],
