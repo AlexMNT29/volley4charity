@@ -447,7 +447,7 @@ body {
 .stage-title {
     display: flex;
     justify-content: space-between;
-    font-size: 8px;
+    font-size: 10px;
     letter-spacing: .12em;
     color: #8f9195;
     font-weight: 800;
