@@ -50,7 +50,7 @@ function renderGroup(group,id){
   el.innerHTML=`<div class="table-head"><span>#</span><span>Team</span><span>MP</span><span>PTS</span></div>`+stats.map((t,i)=>`<div class="standing-row ${i===0?'leader':''}"><span class="rank">${i+1}</span><span class="team-name">${esc(t.team)}${i===0?'<em>TOP</em>':''}</span><span>${t.played}</span><strong>${t.points}</strong></div>`).join('');
 }
 function matchCard(m){
- const s=m.score; return `<div class="match-card"><div class="match-meta"><span>GROUP ${m.group}</span><span>${m.date}</span></div><div class="match-team"><span>${esc(m.a)}</span><b>${s?s[0]:'—'}</b></div><div class="match-team"><span>${esc(m.b)}</span><b>${s?s[1]:'—'}</b></div><div class="format">BEST OF 3</div></div>`;
+ const s=m.score; return `<div class="match-card"><div class="match-meta"><span>GROUP ${m.group}</span><span>${m.date}</span></div><div class="match-team"><span>${esc(m.a)}</span><b>${s?s[0]:'—'}</b></div><div class="match-team"><span>${esc(m.b)}</span><b>${s?s[1]:'—'}</b></div></div>`;
 }
 function renderMatchdays(){ $('#matchdays').innerHTML=T.matchdays.map(md=>`<div class="matchday"><div class="md-title"><span>${md.name}</span><small>${md.matches.length} matches</small></div><div class="match-grid">${md.matches.map(matchCard).join('')}</div></div>`).join(''); }
 function playoffTeam(ref){return ref.group?displayQualifier(ref.group,ref.place):''}
